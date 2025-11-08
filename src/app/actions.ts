@@ -17,11 +17,11 @@ async function handleAction<T_Input, T_Output>(
   }
 }
 
-export const trainModelsAction = (input: TrainAndEvaluateModelsInput) =>
+export const trainModelsAction = async (input: TrainAndEvaluateModelsInput) =>
   handleAction(trainAndEvaluateModels, input);
 
-export const generateForecastAction = (input: GenerateDemandForecastsInput) =>
+export const generateForecastAction = async (input: GenerateDemandForecastsInput) =>
   handleAction(generateDemandForecasts, input);
 
-export const suggestDataSourcesAction = (input: SuggestExternalDataSourcesInput) =>
+export const suggestDataSourcesAction = async (input: SuggestExternalDataSourcesInput) =>
   handleAction(suggestExternalDataSources, input);
